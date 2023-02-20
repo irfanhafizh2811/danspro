@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Aldan Android Test Lvl4</string>
+    <string name="title_home">Home</string>
+    <string name="title_account">Account</string>
+
+    <string name="product_detail"><u>Go To Website</u></string>
+    <string name="job_detail">JOB DETAIL</string>
+    <string name="company_icon">Company Icon</string>
+    <string name="company">Company</string>
+    <string name="location">Location</string>
+    <string name="job_specification">Job Specification</string>
+    <string name="title">Title</string>
+    <string name="fulltime">Fulltime</string>
+    <string name="description">Description</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="lewati_sign_in">Lewati Sign In</string>
+    <string name="logout">Logout</string>
+    <string name="name">Name</string>
+    <string name="photo_profile">Photo Profile</string>
+    <string name="account">ACCOUNT</string>
+    <string name="job_list">JOB LIST</string>
+    <string name="search">Search</string>
+    <string name="show_filter">Show Filter</string>
+    <string name="apply_filter">Apply Filter</string>
+    <string name="loading">Loading</string>
+</resources>

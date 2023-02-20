@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "15866808522",
+    "project_id": "aldan-dans-multi-1654067522489",
+    "storage_bucket": "aldan-dans-multi-1654067522489.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:15866808522:android:062fefccf31d097812cc33",
+        "android_client_info": {
+          "package_name": "com.irfan.dansjob"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "15866808522-vd4351doef5lu5emp8so540i44d1ealb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.irfan.dansjob",
+            "certificate_hash": "7072d62cfcf32f2223d1e4651b30e881df56a06b"
+          }
+        },
+        {
+          "client_id": "15866808522-7e7s1k0bjmjk7jo9mdgg4ecn8dtcctgk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcOYvgsaolQw3LTxNlajosr9lWVjScKV0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "15866808522-7e7s1k0bjmjk7jo9mdgg4ecn8dtcctgk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

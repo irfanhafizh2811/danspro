@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/srPositionDetail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsvLayoutPositionList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clFilter">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clPositionDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/ivPositionDetail"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="-10dp"
+                android:contentDescription="@string/company_icon"
+                android:src="@drawable/ic_caret_left_24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvPositionDetailTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/job_detail"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_head"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvPositionDetailTitleCompanyTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/company"
+                android:textSize="@dimen/text_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPositionDetailTitle" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clPositionDetailCompanyDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:background="@drawable/background_border"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPositionDetailTitleCompanyTitle">
+
+                <ImageView
+                    android:id="@+id/ivPositionCompanyLogo"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:contentDescription="@string/company_icon"
+                    android:src="@mipmap/ic_launcher"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvPositionDetailCompanyTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/company"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_title"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/ivPositionCompanyLogo"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvPositionDetailLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/location"
+                    android:textSize="@dimen/text_sub_title"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/ivPositionCompanyLogo"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPositionDetailCompanyTitle" />
+
+                <TextView
+                    android:id="@+id/tvPositionCompanyWebsite"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/product_detail"
+                    android:textColor="#0563C1"
+                    android:textSize="@dimen/text_sub_title"
+                    app:layout_constraintStart_toEndOf="@id/ivPositionCompanyLogo"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPositionDetailLocation" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvPositionDetailJobSpecificationTitleHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/job_specification"
+                android:textSize="@dimen/text_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clPositionDetailCompanyDetail" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clPositionDetailJobSpecification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:background="@drawable/background_border"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPositionDetailJobSpecificationTitleHead">
+
+                <TextView
+                    android:id="@+id/tvPositionDetailJobSpecificationTitleTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title"
+                    android:textSize="@dimen/text_title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvPositionDetailJobSpecificationTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_title"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPositionDetailJobSpecificationTitleTitle" />
+
+                <TextView
+                    android:id="@+id/tvPositionDetailJobSpecificationFulltimeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/fulltime"
+                    android:textSize="@dimen/text_title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPositionDetailJobSpecificationTitle" />
+
+                <TextView
+                    android:id="@+id/tvPositionDetailJobSpecificationFulltime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fulltime"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_title"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPositionDetailJobSpecificationFulltimeTitle" />
+
+                <TextView
+                    android:id="@+id/tvPositionDetailJobSpecificationDescriptionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/description"
+                    android:textSize="@dimen/text_title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPositionDetailJobSpecificationFulltime" />
+
+                <WebView
+                    android:id="@+id/wvPositionDetailJobSpecificationDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPositionDetailJobSpecificationDescriptionTitle"
+                    tools:ignore="WebViewLayout" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

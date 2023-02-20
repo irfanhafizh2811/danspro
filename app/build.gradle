@@ -1,0 +1,107 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.plugin.parcelize'
+}
+apply from: "$rootDir/dependencies.gradle"
+
+android {
+    signingConfigs {
+        release {
+            storeFile file('../aldandansmultiprolv4')
+            storePassword 'aldan2022'
+            keyAlias 'key0'
+            keyPassword 'aldan2022'
+        }
+    }
+
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.irfan.dansjob"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation supportDependencies.coreKotlin
+    implementation supportDependencies.appCompat
+    implementation supportDependencies.materialDesign
+    implementation supportDependencies.constrainLayout
+    implementation supportDependencies.liveData
+    implementation supportDependencies.viewModel
+    implementation supportDependencies.navigationFragment
+    implementation supportDependencies.navigationUI
+
+    // Kotlin Injection
+    implementation libraries.koinCore
+    implementation libraries.koinCoreExt
+    implementation libraries.koinFragment
+    implementation libraries.koinWorkManager
+    implementation libraries.koinWorkManager
+    implementation libraries.koinScope
+    implementation libraries.koinViewModel
+    implementation libraries.koinAndroidExt
+
+    // Google Service
+    implementation 'com.google.android.gms:play-services-auth:20.2.0'
+
+    // Google Firebase
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:30.1.0')
+
+    // Add the dependency for the Firebase SDK for Google Analytics
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+
+    // Add the dependencies for any other desired Firebase products
+    // https://firebase.google.com/docs/android/setup#available-libraries
+
+
+    // Glide for load Image
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+
+    // Network
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:retrofit-converters:2.6.1'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
+
+    // RxJava
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
+    implementation 'io.reactivex.rxjava2:rxkotlin:2.4.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+    // Debug network
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'com.google.android.gms:play-services-base:18.0.1'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}

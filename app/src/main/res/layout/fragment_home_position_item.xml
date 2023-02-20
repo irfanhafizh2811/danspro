@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    android:background="@drawable/background_border"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/ivPositionCompanyLogo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:contentDescription="@string/company_icon"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPositionTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/title"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_head"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/ivPositionDetail"
+        app:layout_constraintStart_toEndOf="@id/ivPositionCompanyLogo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPositionCompany"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/company"
+        android:textSize="@dimen/text_sub_title"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/ivPositionDetail"
+        app:layout_constraintStart_toEndOf="@id/ivPositionCompanyLogo"
+        app:layout_constraintTop_toBottomOf="@+id/tvPositionTitle" />
+
+    <TextView
+        android:id="@+id/tvPositionLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/location"
+        android:textSize="@dimen/text_sub_title"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/ivPositionDetail"
+        app:layout_constraintStart_toEndOf="@id/ivPositionCompanyLogo"
+        app:layout_constraintTop_toBottomOf="@+id/tvPositionCompany" />
+
+    <ImageView
+        android:id="@+id/ivPositionDetail"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/company_icon"
+        android:src="@drawable/ic_caret_right_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
